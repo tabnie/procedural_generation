@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqd4f00ueogad"]
+
+[ext_resource type="Script" uid="uid://bulndhqah86tu" path="res://procedural_generation.gd" id="1_wrvhh"]
+[ext_resource type="Texture2D" uid="uid://d1d6ach5xua0w" path="res://icon.svg" id="2_boltm"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4exj2"]
+texture = ExtResource("2_boltm")
+3:2/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_wrvhh"]
+sources/0 = SubResource("TileSetAtlasSource_4exj2")
+
+[node name="ProceduralGeneration" type="Node2D"]
+script = ExtResource("1_wrvhh")
+frequency = 0.02
+tile_chance = 0.041
+
+[node name="TM" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+tile_set = SubResource("TileSet_wrvhh")
+
+[node name="Camera" type="Camera2D" parent="."]
+offset = Vector2(200, 200)
+zoom = Vector2(0.1, 0.1)
