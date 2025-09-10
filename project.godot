@@ -15,6 +15,11 @@ run/main_scene="uid://bqd4f00ueogad"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=500
+window/size/viewport_height=500
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
